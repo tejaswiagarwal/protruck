@@ -1,28 +1,37 @@
 Issues = new Mongo.Collection('issues');
 
 Issues.attachSchema(new SimpleSchema({
-  title:{
+  source:{
     type: String,
-    label: "Title",
-    max: 100
-  },
-  description:{
+    label: "Source",
+/*    autoform:  
+      type: 'map'
+      afFieldInput:
+        geolocation: true
+        searchBox: true
+        autolocate: true 
+*/  },
+  destination:{
     type: String,
-    label: "Description",
-    max: 1024
-  },
-  dueDate:
+    label: "Destination",
+/*    autoform:
+      type: 'map'
+      afFieldInput:
+        geolocation: true
+        searchBox: true
+        autolocate: true            
+*/  },
+  pickupDate:
   {
     type: Date,
-    label: "Due Date",
-    optional: true
+    label: "PickUp Date",
+    optional: false
   },
-  priority:
+  phone:
   {
-    type: String,
-    label: "Priority",
-    allowedValues: ['High', 'Medium', 'Low'],
-    optional: true
+    type: Number,
+    label: "Phone",
+    optional: false
   },
   createdBy: {
     type: String,

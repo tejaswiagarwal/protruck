@@ -3,10 +3,10 @@
   <table class="table table-hover">
         <thead>
           <tr>
-            <th>From</th>
-            <th>To</th>
-            <th>Date</th>
-            <th>Priority</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>PickUp Date</th>
+            <th>Phone</th>
             <th></th>
           </tr>
         </thead>
@@ -14,11 +14,11 @@
 
           {{#each issues}}
             <tr>
-              <td>{{title}}</td>
-              <td>{{description}}</td>
-              <td>{{dueDateFormatted}}</td>
-              <td>
-                {{#if priorityHigh}}
+              <td>{{source}}</td>
+              <td>{{destination}}</td>
+              <td>{{pickupDate}}</td>
+              <td>{{phone}}</td>
+              <!--  {{#if priorityHigh}}
                   <span class="label label-danger">{{priority}}</span>
                 {{/if}}
 
@@ -30,6 +30,7 @@
                   <span class="label label-success">{{priority}}</span>
                 {{/if}}
               </td>
+              -->
               <td>
                 {{#linkTo route='editIssue'}}
                   <i class="fa fa-pencil-square-o"></i>
